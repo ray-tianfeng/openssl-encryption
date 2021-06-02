@@ -2,14 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
-    signingConfigs {
-        config {
-            keyAlias 'xiyou.keystore'
-            keyPassword 'www.52xiyou.com'
-            storeFile file('F:/keystore/xiyou/xiyou.keystore')
-            storePassword 'www.52xiyou.com'
-        }
-    }
+  
     defaultConfig {
         applicationId "com.zl.openssl_encryption"
         minSdkVersion 14
@@ -26,7 +19,6 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
